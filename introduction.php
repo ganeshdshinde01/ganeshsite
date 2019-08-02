@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ganesh Shinde | Articles</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_300.font.js"></script>
+<script type="text/javascript" src="js/Myriad_Pro_400.font.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<!--[if lt IE 7]>
+<link rel="stylesheet" href="css/ie6.css" type="text/css" media="screen">
+<script type="text/javascript" src="js/ie_png.js"></script>
+<script type="text/javascript">ie_png.fix('.png, footer, header nav ul li a, .nav-bg, .list li img');</script>
+<![endif]-->
+<!--[if lt IE 9]><script type="text/javascript" src="js/html5.js"></script><![endif]-->
+</head>
+<body id="page3">
+<!-- START PAGE SOURCE -->
+<div class="wrap">
+ <?php
+
+include 'header.php';
+
+?>
+  <div class="container">
+    <aside>
+       <?php
+      
+       include 'category.php';
+
+      ?>
+     <div>&nbsp;</div><div>&nbsp;</div>
+      
+      <ul class="news">
+        <img style="width: 230px;height: 380px" src="images/img2.jpg">
+      </ul>
+    </aside>
+    <section id="content">
+      <div id="banner">
+        <?php
+
+       include 'imageslider.php';
+
+        ?>
+      </div>
+      <div class="inside">
+           
+        
+          <div>&nbsp;</div>
+          <h2 style="color: purple"><strong>Introduction</strong></h2>
+          
+           <label><strong>NAME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:- &nbsp; </strong>Ganesh Dilip Shinde</label><br><br>
+          <label><strong>Address &nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;</strong>At Post Kaulane(Gaa) Tal malegoam Dist Nashik</label><br><br>
+           <label><strong>Age &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;</strong>22</label><br><br>
+           <label><strong>Mobile NO :-&nbsp;</strong>7507062567</label><br><br>
+           <label><strong>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-&nbsp;</strong>sganesh767@gmail.com</label><br><br>
+           <label><strong>Website&nbsp;&nbsp;&nbsp; &nbsp;:-&nbsp;</strong>ganeshdshinde01.000webhostapp.com<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ganeshshinde.000webhostapp.com</label><br><br>
+
+
+
+         <!--  ==========================================
+          ========================================== -->
+
+
+      </div>
+    </section>
+  </div>
+</div>
+<?php
+
+include 'footer.php';
+
+?>
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
+</body>
+</html>
