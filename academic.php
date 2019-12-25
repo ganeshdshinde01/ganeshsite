@@ -75,8 +75,8 @@ include 'header.php';
     </tr>
     <tr>
         <td >SE</td>
-      <td >Sandip Institute Of Engineering </br> And Management Nashik</td>
-      <td>2017-2018</td>
+      <td >Sandip Institute Of Engineering </br> And Management Nashik </td>
+      <td>2017 - 2018</td>
       <td>57.27%</td>
     </tr>
 
