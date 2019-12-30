@@ -1,0 +1,61 @@
+# This is a sample build configuration for PHP.
+# Check our guides at https://confluence.atlassian.com/x/e8YWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+
+# Specify a docker image from Docker Hub as your build environment.
+# All of your pipeline scripts will be executed within this docker image.
+
+image: php:5.6.30
+
+# You might want to create and access a service (like a database) as part
+# of your Pipeline workflow. You can do so by defining it as a service here.
+
+definitions:
+    services:
+
+        # Your service can be named anything - what runs is determined
+        # by the Docker Hub image you specify.
+
+        mongo:
+            image: mongo
+
+# All of your Pipelines will be defined in the `pipelines` section.
+# You can have any number of Pipelines, but they must all have unique
+# names. The default Pipeline is simply named `default`.
+
+pipelines:
+    default:
+
+        # Each Pipeline consists of one or more steps which each execute
+        # sequentially in separate docker containers.
+        #
+        # name: optional name for this step
+        # script: the commands you wish to execute in this step, in order
+
+        - step:
+            name: Building Application
+            script:
+                - echo "Building Application"
+
+        # Your Pipeline automatically contains a copy of your code in its working
+        # directory; however, the docker image may not be preconfigured with all
+        # of the PHP extensions your project requires. You may need to install
+        # them yourself, as shown below.
+        #
+        # REMEMBER: each Step executes in a separate container, so scripts you
+        # execute here will have no effect on the containers executing future
+        # Steps. You might need to copy files manually between Steps, or you
+        # might prefer to run everything in one Step.
+        #
+        # caches: idk lol
+        # artifacts: files which should be copied into the next Pipeline Step
+
+
+        - step:
+            name: Deploy to EC2
+            script:
+            - apt-get update -y
+            - apt-get install -y ssh
+            - ssh builder1@13.233.38.249 'cd /opt/lampp/htdocs/testpipeline; git config --global user.email "manoj.nanaware@"; git config --global user.name "Your Name"git stash; git pull origin master; echo "Changes deployed!"'
+            - echo 'successfully connected'
